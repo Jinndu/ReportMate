@@ -816,7 +816,12 @@ aside{
 .loading-animation{
     animation: loading .6s ease-in-out forwards;
 }
-
+.step-card:nth-child(2){
+    animation-delay: .5;
+}
+.step-card:nth-child(2){
+    animation-delay: 1;
+}
 /* ANIMATIONS */
 @keyframes flash {
     from{}to{opacity: 1;}
