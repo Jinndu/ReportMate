@@ -878,7 +878,7 @@ body{
         height: 100%;
 
         background: #f9f9ff;
-        border: 1px solid #cfc4c5;
+        border-left: 1px solid #cfc4c5;
 
         z-index: 9999;
 
@@ -888,6 +888,7 @@ body{
         transform: translateX(100%);
 
         transition: .3s;
+
     }
 
     /* SIDE-MENU HEADING */
@@ -896,7 +897,7 @@ body{
 
         margin-bottom: 50px;
 
-        color: #cfc4c5;
+        color: #666;
 
         font-size: 20px;
     }
@@ -923,7 +924,6 @@ body{
         text-decoration: none;
     }
 
-    
 
     /* SIDE-MENU CLOSE BTN */
     .side-menu span{
@@ -932,13 +932,17 @@ body{
         right: 32px;
 
         color: #111c2d;
+
+        cursor: pointer;
     }
 
-    /* SIDE MENU SLIDE IN */
+    /* SIDE MENU SLIDE IN ACTIONS*/
     .side-menu-slide-In{
         transform: translateX(0);
     }
-
+    .menu-open{
+        filter: blur(3px);
+    }
 }
 
 @media (max-width: 768px){
