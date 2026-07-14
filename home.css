@@ -217,13 +217,15 @@ body{
     margin-top: 20px;
 }
 /* primary & secondary button */
-.hero-buttons>button{
+.hero-buttons>a{
     padding: 20px 34px;
     
     border-radius: 5px;
 
     font-size: 14px;
     font-weight: 600;
+
+    text-decoration: none;
 
     cursor: pointer;
 
@@ -798,6 +800,8 @@ body{
     color: black;
 }
 
+/* SIDE MENU */
+
 /* ANIMATIONS */
 @keyframes flash {
     from{}to{opacity: 1;}
@@ -816,10 +820,10 @@ body{
 
 @media(max-width:1100px){
     /* NAV */
-    .nav-links{
+    nav .nav-links{
         display: none;
     }
-    .nav-btn{
+    nav .nav-btn{
         display: none;
     }
     .nav-menu{
@@ -861,6 +865,80 @@ body{
     .steps{
         grid-template-columns: 1fr;
     }
+
+    /* side menu */
+    aside{
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        padding: 42px 32px;
+
+        width: 70vw;
+        height: 100%;
+
+        background: #f9f9ff;
+        border: 1px solid #cfc4c5;
+
+        z-index: 9999;
+
+        display: flex;
+        flex-direction: column;
+        
+        transform: translateX(100%);
+
+        transition: .3s;
+    }
+
+    /* SIDE-MENU HEADING */
+    .side-menu .heading{
+        display: block;
+
+        margin-bottom: 50px;
+
+        color: #cfc4c5;
+
+        font-size: 20px;
+    }
+
+    /* SIDE MENU LINKS */
+    .side-menu .nav-links{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .side-menu a.active{
+        border-bottom: none;
+    }
+
+    /* SIDE MENU BTN */
+    .side-menu-btn{
+        margin-top: auto;
+    }
+    .side-menu .nav-btn{
+        padding: 20px 24px;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    
+
+    /* SIDE-MENU CLOSE BTN */
+    .side-menu span{
+        position: absolute;
+        top: 40px;
+        right: 32px;
+
+        color: #111c2d;
+    }
+
+    /* SIDE MENU SLIDE IN */
+    .side-menu-slide-In{
+        transform: translateX(0);
+    }
+
 }
 
 @media (max-width: 768px){
