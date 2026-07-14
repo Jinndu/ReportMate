@@ -727,9 +727,78 @@ body{
 
     transition: .3s;
 }
+
 .cta-btn:hover span{
     transform: translateX(6px);
 }
+
+/* FOOTER  */
+.footer{
+    padding: 40px 32px;
+
+    background: white;
+
+    border-top: 1px solid #cfc4c5;
+}
+.footer-container{
+    max-width: 1024px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* BRAND INFO */
+.footer-brand{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-brand h2{
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.footer-brand p{
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+/* FOOTER LINKS */
+.footer-links{
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.footer-links a{
+    text-decoration: none;
+
+    color: #666;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+/* hover */
+.footer-links a:hover{
+    color: black;
+}
+
+/* ANIMATIONS */
 @keyframes flash {
     from{}to{opacity: 1;}
 }
@@ -851,6 +920,18 @@ body{
 
     .cta h2{
         font-size: 32px;
+    }
+
+    /* footer */
+    .footer-container{
+        flex-direction: column;
+
+        text-align: center;
+    }
+    .footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 }
 
