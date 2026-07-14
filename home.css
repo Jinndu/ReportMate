@@ -807,8 +807,10 @@ aside{
 
 /* scroll animation */
 .hero-title, .reality-card, .section-header, .step-card{
-    transform: translateY(5px);
+    transform: translateY(15px);
+    
     opacity: 0;
+
     transition: 1s;
 }
 .loading-animation{
@@ -831,7 +833,7 @@ aside{
 @keyframes loading{
     from{}
     to{
-        transform: translateY();
+        transform: translateY(0);
         opacity: 1;
     }
 }
