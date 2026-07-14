@@ -801,6 +801,9 @@ body{
 }
 
 /* SIDE MENU */
+aside{
+    display: none;
+}
 
 /* ANIMATIONS */
 @keyframes flash {
