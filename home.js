@@ -4,6 +4,7 @@ const asideMenu = document.querySelector("aside")
 const closeMenuButton = document.querySelector("aside span")
 const main = document.querySelector("main")
 const body = document.querySelector("body")
+const loadingAnimation = document.querySelectorAll(".loader")
 
 // EVENTS
 navMenu.addEventListener("click",openMenu)
@@ -21,3 +22,17 @@ function closeSideMenu(){
     body.style.overflow="auto"
     
 }
+
+var observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("loading-animation")
+        }
+        if(!entry.isIntersecting){
+            entry.target.classList.remove("loading-animation")
+        }
+    })
+})
+loadingAnimation.forEach(loaded=>{
+    observer.observe(loaded)
+})

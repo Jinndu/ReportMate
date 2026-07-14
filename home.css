@@ -805,6 +805,16 @@ aside{
     display: none;
 }
 
+/* scroll animation */
+.hero-title, .reality-card, .section-header, .step-card{
+    transform: translateY(5px);
+    opacity: 0;
+    transition: 1s;
+}
+.loading-animation{
+    animation: loading .6s ease-in-out forwards;
+}
+
 /* ANIMATIONS */
 @keyframes flash {
     from{}to{opacity: 1;}
@@ -816,6 +826,13 @@ aside{
     }
     100%{
         transform: translateX(50px);
+    }
+}
+@keyframes loading{
+    from{}
+    to{
+        transform: translateY();
+        opacity: 1;
     }
 }
 
